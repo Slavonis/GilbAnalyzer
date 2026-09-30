@@ -50,18 +50,20 @@ function analyzeNumbers(numbers) {
 // Оператор множественного выбора switch (классификация по среднему значению).
 function classify(avg) {
     var grade;
-    switch (true) {
-        case avg >= 90:
-            grade = "A";
-            break;
-        case avg >= 75:
-            grade = "B";
-            break;
-        case avg >= 60:
-            grade = "C";
-            break;
-        default:
-            grade = "F";
+    for (var i = 0; i < numbers.length; i++) {
+        switch (true) {
+            case avg >= 90:
+                grade = "A";
+                break;
+            case avg >= 75:
+                grade = "B";
+                break;
+            case avg >= 60:
+                grade = "C";
+                break;
+            default:
+                grade = "F";
+        }
     }
     return grade;
 }
