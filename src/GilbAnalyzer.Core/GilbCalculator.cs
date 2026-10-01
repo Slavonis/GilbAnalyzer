@@ -169,7 +169,7 @@ public static class GilbCalculator
             switchCLContribution,
             switchCount > 0 ? $"Σ ветвей case = {switchBranches}; вклад = Σ(case)" : ""));
         res.Breakdown.Add(new BreakdownEntry("тернарный ?:", ternaryCount, ternaryCount));
-        res.Breakdown.Add(new BreakdownEntry("прочие операторы-инструкции", simpleStatements, 0,
+        res.Breakdown.Add(new BreakdownEntry("прочие операторы", simpleStatements, 0,
             "не условные; входят только в N"));
 
         return res;
